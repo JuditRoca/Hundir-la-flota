@@ -2,13 +2,14 @@ import random
 import numpy as np
 import variables as vr
 
-def crear_tablero(tamaño):
-    import numpy as np
-    return np.full((tamaño,tamaño), " ")
 
 def barcos(lista_barcos, tablero):
     for barco in lista_barcos:
         tablero= colocar_barco(barco,tablero)
+        
+def hacer_tablero(tamaño):
+    import numpy as np
+    return np.full((tamaño,tamaño), " ")
 
 def colocar_barco(barco, tablero):
     for casilla in barco:

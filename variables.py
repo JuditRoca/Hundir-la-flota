@@ -2,9 +2,9 @@
 import funciones as fn
 import variables as vr
 
-tablero_maquina = fn.crear_tablero(10)
+tablero_maquina = fn.hacer_tablero(10)
 
-tablero_jugador = fn.crear_tablero(10)
+tablero_jugador = fn.hacer_tablero(10)
 
 #BARCOS JUGADOR
 barco_1_jugador = fn.crear_barco_random(1,10)
