@@ -1,5 +1,4 @@
 
-
 def crear_tablero(tamaño):
     import numpy as np
     return np.full((tamaño, tamaño), " ")
