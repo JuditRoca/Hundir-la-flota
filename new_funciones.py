@@ -76,8 +76,14 @@ def show_tablero(tablero):
     tablero_modificado = tablero.copy()
     for i in range(len(tablero)):
         for j in range(len(tablero[i])):
-            if tablero[i][j] == "O":
+            if tablero[i][j] == "B":
                 tablero_modificado[i][j] = " "
+            elif tablero[i][j] == "M":
+                tablero_modificado[i][j] == "M"
+            elif tablero[i][j] == "X":
+                tablero_modificado[i][j] == "X"
+            elif tablero[i][j]== " ":
+                tablero_modificado[i][j] = " "   
     return tablero_modificado
 
 
@@ -118,6 +124,8 @@ def jugar(turno_actual):
                     break
             elif resultado == False:
                 turno_actual = vr.jugador
+
+        
 
        
 
