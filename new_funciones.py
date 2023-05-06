@@ -38,17 +38,42 @@ def colocar_barco(barco, tablero):
     for casilla in barco:
         tablero[casilla] = "O"
 
-
-#def ordenar_barcos(lista_barcos)
-
-def disparar(casilla, tablero):
-    import variables as vr
-    while "O" in tablero:
-        casilla = input("Donde deseas disparar?")
-        if tablero[casilla] == "O":
-            tablero[casilla] = "X"
+def disparo_aleatorio(tablero_oponente):
+    import random
+    import numpy as np
+    while True:
+        fila_random = np.random.randint(0, 9)
+        columna_random = np.random.randint(0, 9)
+        casilla = ((fila_random,columna_random))
+        if tablero_oponente[casilla] == "O":
+            tablero_oponente[casilla] = "X"
             print("Tocado")
         else:
-            tablero[casilla] = "-"
+            tablero_oponente[casilla] = "-"
             print("Has dado en agua, cambio de turno")
         return
+
+def disparar(casilla, tablero_oponente):
+    import variables as vr
+    while True:
+        
+        if tablero_oponente[casilla] == "O":
+            tablero_oponente[casilla] = "X"
+            print("Tocado")
+        else:
+            tablero_oponente[casilla] = "-"
+            print("Has dado en agua, cambio de turno")
+            
+    return tablero_oponente
+    
+def jugar(turno_actual):
+    import variables as vr
+    while True:
+        print("Turno de ", turno_actual)
+        if turno_actual == vr.jugador:
+            fila= int(input("Que fila deseas atacar?"))
+            columna = int(input("Que columna deseas atacar?"))
+            tablero_oponente = vr.tablero_maquina
+            casilla = fila, columna  
+            disparar(casilla, tablero_oponente)
+        
