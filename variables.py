@@ -2,12 +2,13 @@ import variables as vr
 import new_funciones as fn
 disparos_iniciales = 10
 jugador = "Jugador"
-maquina = "Jugador2"
-left_jugador = disparos_iniciales
-left_maquina = disparos_iniciales
+maquina = "Maquina"
 
 tablero_jugador = fn.crear_tablero(10)
 tablero_maquina = fn.crear_tablero(10)
+
+vidas_jugador = 20
+vidas_maquina = 20
 #BARCOS JUGADOR
 barco_1_jugador = fn.crear_barco_random(1,10)
 barco_2_jugador = fn.crear_barco_random(1,10)
