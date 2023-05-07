@@ -3,7 +3,7 @@ def crear_tablero(tamaño):
     import numpy as np
     return np.full((tamaño, tamaño), " ")
 
-def crear_barco_random(eslora, tamaño):
+def barco_rand(eslora, tamaño):
     import random
     barco_random = []
     fila_random = random.randint(0,9)
