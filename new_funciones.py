@@ -88,15 +88,20 @@ def show_tablero(tablero):
 
 def jugar(turno_actual):
     import variables as vr
+
+
     while True:
         print ("Turno de", turno_actual)
         
         if turno_actual == vr.jugador:
             print("Tablero maquina:")
             print(show_tablero(vr.tablero_maquina))
+            print("A la maquina le queda" ,vr.vidas_maquina, "vidas.")
         else:
             print("Tablero jugador:")
             print(vr.tablero_jugador)
+            print("Al jugador le queda" ,vr.vidas_jugador, "vidas.")
+
 
         if turno_actual == vr.jugador:
             

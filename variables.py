@@ -1,7 +1,7 @@
 import variables as vr
 import new_funciones as fn
 import clases as cl
-disparos_iniciales = 10
+
 jugador = "Jugador"
 maquina = "Maquina"
 
