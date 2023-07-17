@@ -1,5 +1,4 @@
-import variables as vr
-import new_funciones as fn
+import funciones as fn
 import clases as cl
 
 jugador = "Jugador"

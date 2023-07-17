@@ -1,4 +1,4 @@
-import new_funciones as fn 
+import funciones as fn 
 import variables as vr
 2
 print("Bienvenido a hundir la flota! Comienza el juego.")

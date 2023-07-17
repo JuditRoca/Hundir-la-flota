@@ -1,9 +1,23 @@
 
-class barco():
+class Barco:
     def __init__(self, tamaño=1, tablero=10):
+        """
+        Inicializa una instancia de la clase Barco.
+
+        Args:
+            tamaño (int): Tamaño del barco.
+            tablero (int): Tamaño del tablero.
+        """
         self.tamaño = tamaño
         self.tablero = tablero
+
     def barco_rand(self):
+        """
+        Genera las coordenadas aleatorias para ubicar el barco en el tablero.
+
+        Returns:
+            list: Lista de coordenadas del barco.
+        """
         import random
         barco_random = []
         fila_random = random.randint(0,9)
